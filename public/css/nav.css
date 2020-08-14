@@ -1,0 +1,109 @@
+nav{
+    height: 50px;
+    background-image: linear-gradient(to right, #1f509b,#ada44e,#998e2a,#0b3574);
+    border-bottom: 3px solid rgb(255, 143, 38);
+    background-size: 500%;
+}
+li{
+    display: inline;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+li > a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+#important{
+    padding-left: 10px;  
+}
+#navigation{
+    float: left;
+    padding-left: 250px;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+#logout{
+    float: right;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+}
+#brand{
+    position: absolute;
+    left: 110px;
+    font-size: 2rem;
+    color:#fff;
+}
+
+/* navigation */
+.navigation{
+    position: absolute;
+    height: 300px;
+    width: 250px;
+    background: rgb(31, 80, 155);
+    margin-left: 240px;
+    display: none;
+    z-index: 100;
+}
+.navigation a:hover{
+    background-color: rgb(255, 143, 38);
+}
+.navigation a{
+    color: #fff;
+    text-decoration: none;
+    padding-left: 20px;
+    z-index: 3;
+}
+.important{
+    position: absolute;
+    top: 50px;
+    height: auto;
+    width: 250px;
+    background: rgb(31, 80, 155);
+    margin-left: 363px;
+    display: none;
+    z-index: 200;
+}
+.important a{
+    padding-left: 20px;
+}
+.important a:hover{
+    background-color: rgb(255, 143, 38);
+}
+#back{
+    padding-right: 10px;
+    padding-left: 8px;
+    /* border-right: 1px solid #fff; */
+    float: right;
+
+}
+/* chat */
+
+#live{
+    background: rgba(224, 92, 174, 1.0);
+    background: -webkit-radial-gradient(bottom, rgba(224, 92, 174, 1.0), rgba(46, 141, 240, 1.0));
+    background: -moz-radial-gradient(bottom, rgba(224, 92, 174, 1.0), rgba(46, 141, 240, 1.0));
+    background: radial-gradient(to top, rgba(224, 92, 174, 1.0), rgba(46, 141, 240, 1.0));
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #fff;
+    float: right;
+    background-size: 393%;
+    height: 47px;
+    transition: animation 3s ease-in;
+}
+#live:hover{
+    animation: fade .10s infinite;
+}
+/* background: rgba(224, 92, 174, 1.0);
+background: -webkit-radial-gradient(bottom, rgba(224, 92, 174, 1.0), rgba(46, 141, 240, 1.0));
+background: -moz-radial-gradient(bottom, rgba(224, 92, 174, 1.0), rgba(46, 141, 240, 1.0));
+background: radial-gradient(to top, rgba(224, 92, 174, 1.0), rgba(46, 141, 240, 1.0)); */
+
+
+/* animation */
+@keyframes fade{
+    0%{background-size: 100%;}
+    50%{background-size: 200%;}
+    75%{background-size: 300%;}
+    100%{background-size: 395%;}
+}

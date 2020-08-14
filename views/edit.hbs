@@ -1,0 +1,23 @@
+{{> nav1 }}
+
+<div class="edit-box">
+    <div class="edit-box-heading">
+        <p style="font-size: 1.6rem;"><strong>Verify Yourself</strong></p>
+    </div>
+    <div class="edit-box-form">
+    <form action="/edit/verify" method="post">
+        <label for="email">Email </label>
+        <input type="email" name="email" id="verify_email"><br><br>
+        <label for="sid">&emsp;SID</label>
+        <input type="password" name="sid" id="verify_sid">       
+        <button type="submit" class="edit-btn">Verify</button>
+    </form>
+    </div>
+    <p class="edit_error_msg">{{error}}{{error_1}}</p>
+</div>
+
+<style>
+    #verify_sid{
+        color: #fff;
+    }
+</style>

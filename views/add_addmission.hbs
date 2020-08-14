@@ -1,0 +1,129 @@
+{{> nav1 }}
+{{!-- addmission code --}}
+<main>
+    <h4 class="main_heading">Add Record</h4>
+    <div class="add_data">
+        <form action="/ips/addmission" method="post">
+            <div class="add_left">
+                <div class="add_name">
+                    <label for="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Name</label>
+                    <input type="text" name="name" required autocomplete="off">
+                </div><br>
+                <div class="add_father">
+                    <label for="fathername">&nbsp;Father Name</label>
+                    <input type="text" name="father" required autocomplete="off">
+                </div><br>
+                <div class="add_mother">
+                    <label for="mothername">Mother Name</label>
+                    <input type="text" name="mother" required autocomplete="off"><br><br>
+                </div>
+                 <div class="add_class">
+                    <label for="class">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class</label>
+                    <select name="classs" id="class">
+                        <option value="kg">KG</option>
+                        <option value="Nursery">Nursery</option>
+                        <option value="1st">1<sup>st</sup></option>
+                        <option value="2nd">2<sup>nd</sup></option>
+                        <option value="3rd">3<suprd></sup></option>
+                        <option value="4th">4<sup>th</sup></option>
+                        <option value="5th">5<sup>th</sup></option>
+                        <option value="6th">6<sup>th</sup></option>
+                        <option value="7th">7<sup>th</sup></option>
+                        <option value="8th">8<sup>th</sup></option>
+                        <option value="9th">9<sup>th</sup></option>
+                        <option value="11th">11<sup>th</sup></option>
+                    </select><br> <br>
+                </div>
+                  <div class="add_phone">
+                    <label for="phone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone</label>
+                    <input type="number" name="phone" required autocomplete="off"><br><br>
+                </div>
+                <div class="add_religion">
+                    <label for="religion">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Religion</label>
+                    <input type="text" name="religion" required autocomplete="off"><br><br>
+                </div>
+                <div class="add_adhar">
+                    <label for="adhar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adhar No</label>
+                    <input type="number" name="adhar" required autocomplete="off"><br><br>
+                </div>
+                <div class="add_dob">
+                    <label for="adhar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.O.B</label>
+                    <input type="date" name="dob" required autocomplete="off"><br><br>
+                </div>
+                 <div class="add_email">
+                    <label for="phone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;</label>
+                    <input type="email" name="email" autocomplete="off" placeholder="Optional"><br><br>
+                </div>
+            </div>
+            <div class="add_right">
+                <div class="add_cat">
+                    <label for="category">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Category</label>
+                    <input type="text" name="category" required autocomplete="off"><br><br>
+                </div>
+
+                 <div class="add_sec">
+                    <label for="section">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section</label>
+                    <select name="section" id="section">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select><br><br>
+                </div>
+                <div class="add_address">
+                    <label for="address">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address </label>
+                    <textarea name="address" cols="55" rows="10" style="position: absolute;"></textarea><br>
+                    <br>
+                </div>
+                <div class="add_photo">
+                    <label for="photo" style="    position: absolute;
+    top: 66%;
+    left: 3%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photo</label>
+                    <input type="file" style="    position: absolute;
+    top: 74%;
+    left: 16%;">
+                </div>
+
+            </div>
+             <div class="reg">
+        <label for="Registration Number">Registration Number</label>
+    <input type="text" id="reg_no" name="registration" readonly>
+    </div>
+            <div class="add_position">
+        <button type="submit" class="add_btn" onclick="add()">ADD</button>
+        <button type="reset" class="add_btn_reset" >Reset</button>
+        </div>
+        </form>
+    </div>
+    <p id="error">{{err}}</p>
+   
+</main>
+
+<style>
+    #error{
+        position: absolute;
+        left: 37%;
+        top: 104%;
+        font-size: 1.2rem;
+    }
+    .reg{
+        position: absolute;
+        top: 80%;
+        left: 12%;
+    }
+    #reg_no{
+        color: rgb(255, 5, 5);
+    }
+</style>
+
+<script>
+    var reg = window.localStorage.getItem('Reg');
+    document.getElementById('reg_no').value = reg;
+function add(){
+   var reg_no = window.localStorage.getItem('Reg');
+    var reg = document.getElementById('reg_no');
+    reg.value = reg_no;
+    reg_no++;
+    reg_no = window.localStorage.setItem('Reg',reg_no);
+}
+</script>

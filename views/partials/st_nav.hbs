@@ -1,0 +1,44 @@
+<nav>
+    <ul>
+        <li id="brand"><i class="fas fa-graduation-cap"></i> IPS</li>
+        <li id="navigation" onmouseover="show()"><a href="#">Navigation <i class="fas fa-sort-down"></i></a></li>
+        <li id="important" onmouseover="showI()"><a href="#">Important links <i class="fas fa-sort-down"></i></a></li>
+        <li id="logout"><a href="/">Logout  <i class="fas fa-sign-out-alt"></i> </a></li>
+    </ul>
+</nav>
+
+<div class="navigation" onmouseout="hide()" onmouseover="show()">
+    <ul>
+        <a href="/ips/findTeacherSheadule"><li>Find Syllabus</li></a><br>
+        <a href="/ips/addmission"><li>Result</li></a><br>
+        <a href="/ips/addmission/edit"><li>Exam Date Sheet</li></a><br>
+        <a href="/ips/addmission/delete"><li>Health Control</li></a><br>
+        <a href="/ips/feescontrol"><li>Fees Control</li></a><br>
+         <a href="/ips/feescontrol"><li>Time Table</li></a><br>
+    </ul>
+</div>
+
+
+
+<div class="important" onmouseout="hideI()" onmouseover="showI()">
+<ul>
+    <a href="#"><li>Summer Holiday</li></a><br> 
+    <a href="/forgotUserPassword"><li>Reset Password</li></a><br>
+    <a href="/newuser"><li>Homework</li></a>
+</ul>
+</div>
+
+<script>
+    function show(){
+    document.getElementsByClassName('navigation')[0].style.display='block';
+    }
+    function hide(){
+      document.getElementsByClassName('navigation')[0].style.display='none';  
+    }
+     function showI(){
+    document.getElementsByClassName('important')[0].style.display='block';
+    }
+    function hideI(){
+      document.getElementsByClassName('important')[0].style.display='none';  
+    }
+</script>

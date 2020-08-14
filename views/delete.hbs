@@ -1,0 +1,129 @@
+{{>nav1}}
+
+<main>
+    <div class="delete_heading">
+        <p id="heading"><strong>Delete Studnet</strong></p>
+    </div>
+<div class="seacrh-reg">
+    <form action="/ips/addmission/delete" method="post">
+        <label for="reg">Registraion Number</label>
+        <input type="text" name="reg">
+        <button type="submit" class="btn_delete">Search</button>
+    </form>
+    {{#if condition}}
+    <div class="message">
+        <p>Studnet Not found with {{reg }} Registraion Number</p>
+    </div>
+    {{/if}}
+    {{#if conditionn}}
+    <div class="student-info" style="    position: absolute;
+    left: -120%;">
+        <table>
+  <tr>
+    <th>Name</th> 
+    <th>Class</th>
+    <th>section</th>
+    <th>Phone Number</th>
+    <th>Father</th>
+    <th>Mother</th>
+    <th>DOB</th>
+    <th>Religion</th>
+    <th>Category</th>
+    <th>Address</th>
+    <th>Registration</th>
+    
+  </tr>
+  <tr>
+    <td>{{name}}</td>
+    <td>{{classs}}</td>
+    <td>{{section}}</td>
+    <td>{{phone}}</td>
+    <td>{{father}}</td>
+    <td>{{mother}}</td>
+    <td>{{dob}}</td>
+    <td>{{religion}}</td>
+    <td>{{category}}</td>
+    <td>{{address}}</td>
+    <td>{{registration}}</td>
+  </tr>
+  
+</table>
+<div class="studnt_photo">
+    <img src="/images/{{photo}}.jpg" alt="student Image" height="150" width="150" id="img">
+</div>
+    </div>
+    <form action="/ips/addmission/delete/student" method="post">
+    <input type="text" readonly name="reg" id="delete_stu" value="{{registration}}" style="color: #fff;background:transparent;border:1px solid #000;padding-left: 22px">
+    <button type="submit" style="position: absolute;
+    left: 150px;
+    top: 774%;
+    padding:7px 30px 7px 30px;
+    background:rgb(235, 101, 101);
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer
+    ">Delete  <i class="fas fa-trash"></i></button>
+    </form>
+    {{/if}}
+</div>
+</main>
+
+<style>
+    main{
+        height: 500px;
+        width: 1080px;
+        background-image:linear-gradient(60deg,rgba(121, 112, 124, 0.712),rgba(57, 108, 219, 0.637));
+    }
+    .delete_heading{
+        color: rgb(73, 74, 75);
+        line-height: 30px;
+        text-align: center;
+        background-color: #f0f8ff4f;
+    }
+    .seacrh-reg{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .btn_delete{
+        padding: 3.5px 18px 3.5px 18px;
+        border:none;
+        border-radius: 3px;
+        background-color: rgb(191, 208, 247);
+        cursor: pointer;
+    }
+    .message{
+         position: absolute;
+         left: -21%;
+         transform: translate(6%,300%);
+         font-size: 1.4rem;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #0e0e0e;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#img{
+    position: absolute;
+       left: 101px;
+    top: 200px
+}
+#delete_stu{
+    position: absolute;
+    top: 776%;
+    left: 56px;
+    width: 86px;
+}
+</style>

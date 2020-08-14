@@ -1,0 +1,102 @@
+{{> nav1 }}
+<main>
+    <h5 class="main_heading">Fees Control</h5>
+    <form action="/ips/feescontrol" method="post" class="fees_form">
+    <div class="fees_input_id">
+        <label for="fees" class="fees_label_id">Student's Registration:</label>
+        <input type="text" name="reg" class="fees_input_idi" value="{{reg}}" placeholder="Enter Here" id="sid">
+    </div>
+    <button type="submit" class="fees_btn" onclick="return valid()">Show</button>
+    </form>
+    <p style="margin: 190px;
+    font-size: 1.7rem;">{{error}}</p>
+    <section class="fees_get-data">
+        <div class="fees-info_fromDB" style="    left: 70px;">
+            {{#if condition}}
+            <ul>
+            <li><strong>Name:</strong><mark>{{name}}</mark></li>
+            <li><strong>Father Name:</strong> <mark>{{father}}</mark></li>
+             <li><strong>Mother Name:</strong><mark>{{mother}}</mark> </li> 
+            <li><strong>Class:</strong><mark>{{classs}} </mark></li>
+            <li><strong>Phone No:</strong><mark>{{phone}}</mark> </li> 
+            </ul>
+        </div>
+    </section>
+
+    <div class="fees-add-data">
+        <form action="/ips/feescontrol" method="post">
+            <div class="fees-add-data-inputs">
+                <ul>
+                    <li>
+                        <label for="jan" class="fees_data_monthlabel">Jan</label>
+                        <input type="checkbox" name="month[0]">
+                    </li>
+                    <li>
+                        <label for="Feb" class="fees_data_monthlabel">Feb</label>
+                        <input type="checkbox" name="month[1]">
+                    </li>
+                     <li>
+                        <label for="march" class="fees_data_monthlabel">March</label>
+                        <input type="checkbox" name="month[2]" >
+                    </li>
+                    <li>
+                        <label for="april" class="fees_data_monthlabel">April</label>
+                        <input type="checkbox" name="month[3]">
+                    </li>
+                     <li>
+                        <label for="may" class="fees_data_monthlabel">May</label>
+                        <input type="checkbox" name="month[4]">
+                    </li>
+                    <li>
+                        <label for="June" class="fees_data_monthlabel">June</label>
+                        <input type="checkbox" name="month[5]">
+                    </li>
+                    <li>
+                        <label for="july" class="fees_data_monthlabel">July</label>
+                        <input type="checkbox" name="month[6]">
+                    </li>
+                    <li>
+                        <label for="Auguest" class="fees_data_monthlabel">Auguest</label>
+                        <input type="checkbox" name="month[7]">
+                    </li>
+                     <li>
+                        <label for="Sept" class="fees_data_monthlabel">Sept</label>
+                        <input type="checkbox" name="month[8]">
+                    </li>
+                    <li>
+                        <label for="oct" class="fees_data_monthlabel">Oct</label>
+                        <input type="checkbox" name="month[9]">
+                    </li>
+                     <li>
+                        <label for="nov" class="fees_data_monthlabel">Nov</label>
+                        <input type="checkbox" name="month[10]">
+                    </li>
+                    <li>
+                        <label for="Dec" class="fees_data_monthlabel">Dec</label>
+                        <input type="checkbox" name="month[11]">
+                    </li>
+                </ul>
+            </div>
+        <button type="submit" class="fees_btn_month">Submit</button>
+        </form>
+    </div>
+    {{/if}}
+
+
+</main>
+
+<script>
+    function valid(){
+        var id = document.getElementById('sid').value;
+        if(id == '' || id == ' ' || id == '   ' || id =='   '){
+            alert("plase fill the Registration Number.");
+            return false;
+        }
+    }
+</script>
+
+<style>
+    .fees_label_id{
+        left: 300px;
+    }
+</style>

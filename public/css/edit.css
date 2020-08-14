@@ -1,0 +1,87 @@
+.edit-box{
+    height: 300px;
+    width: 1080px;
+    background-color: rgb(59, 70, 93);
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+.edit-box-heading{
+    text-align: center;
+    padding-top: 20px;
+}
+.edit-box-form{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#verify_email{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    padding-top:10px;
+    width: 300px;
+}
+#verify_sid{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    padding-top:10px;
+    width: 300px;
+}
+.edit-btn{
+    position: absolute;
+    top: 260%;
+    left: 60%;
+    transform: translate(-100%,-0%);
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+}
+.edit_error_msg{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 6px 50px 6px 50px;
+    border: 1px solid #000;
+}
+
+/* after verifying */
+.edit-heading{
+    padding: 20px;
+    font-size: 1.4rem;
+}
+.edit_info-box{
+    width: 1080px;
+    height: 500px;
+    background-color: rgb(59, 70, 93);
+    color: aliceblue;
+}
+.edit_form{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+#edit_input{
+    width: 200px;
+    height: 20px;
+    border-radius: 2px;
+}
+#editcon-info-btn{
+    margin-top: 40px;
+    padding: 4px 20px 4px 20px;
+
+}
+#editcon-info-btn{
+    padding: 6px 20px 6px 20px;
+    background-color: #3a6cdc;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    margin-top: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+}

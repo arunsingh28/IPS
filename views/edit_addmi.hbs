@@ -1,0 +1,117 @@
+{{>nav1}}
+
+<main>  
+    <div class="edit_addmi">
+        <form action="/ips/addmission/edit" method="post">
+        <label for="name" style="    position: absolute;
+    top: 12%;
+    left: -105%;
+">Registration Number</label>
+        <input type="text" name="name" required>
+        <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <p class="error_message">{{msg}}</p>
+{{#if condition}}
+    <div class="edit_or_modify">
+            <h4 class="main_heading">Edit Record</h4>
+    <div class="add_data">
+        <form action="/ips/addmission" method="post" style="    position: absolute;
+    top: 18%;">
+            <div class="add_left">
+                <div class="add_name">
+                    <label for="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Name&nbsp;</label>
+                    <input type="text" name="name" value="{{name}}" required autocomplete="off">
+                </div><br>
+                <div class="add_father">
+                    <label for="fathername">&nbsp;Father Name&nbsp;</label>
+                    <input type="text" name="father" required value="{{father}}" autocomplete="off">
+                </div><br>
+                <div class="add_mother">
+                    <label for="mothername">Mother Name&nbsp;</label>
+                    <input type="text" name="mother" required autocomplete="off" value="{{mother}}"><br><br>
+                </div>
+                 <div class="add_class">
+                    <label for="class">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;</label>
+                    <input type="text" value="{{classs}}" name="classs">
+                    <br> <br>
+                </div>
+                  <div class="add_phone">
+                    <label for="phone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone&nbsp;</label>
+                    <input type="number" name="phone" value="{{phone}}" required autocomplete="off"><br><br>
+                </div>
+                <div class="add_religion">
+                    <label for="religion">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Religion&nbsp;</label>
+                    <input type="text" name="religion" value="{{religion}}" required autocomplete="off"><br><br>
+                </div>
+                <div class="add_adhar">
+                    <label for="adhar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adhar No&nbsp;</label>
+                    <input type="number" name="adhar" value="{{adhar}}" required autocomplete="off"><br><br>
+                </div>
+                <div class="add_dob">
+                    <label for="adhar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D.O.B&nbsp;</label>
+                    <input type="name" name="dob" value="{{dob}}" required autocomplete="off"><br><br>
+                </div>
+                <div class="add_dob">
+                    <label for="adhar">&nbsp;&nbsp;&nbsp;&nbsp;New D.O.B&nbsp;</label>
+                    <input type="date" name="dob" required autocomplete="off"><br><br>
+                </div>
+            </div>
+            <div class="add_right-edit">
+                <div class="add_cat">
+                    <label for="category">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Category&nbsp;</label>
+                    <input type="text" name="category" value="{{category}}" required autocomplete="off"><br><br>
+                </div>
+
+                 <div class="add_sec">
+                    <label for="section">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section&nbsp;</label>
+                    <input type="text" name="section" value="{{section}}">
+                    <br><br>
+                </div>
+                <div class="add_address">
+                    <label for="address">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address &nbsp;</label>
+                    <input type="text" name="address" value="{{address}}">
+                    <br>
+                    <br>
+                </div>
+                <label for="Registration Number" id="reg_lael">Registration Number&nbsp;</label>
+    <input type="text" id="reg_no" name="registration" value="{{registration}}" readonly>
+               <div class="photo_edit_show">
+                   <img src="/images/{{photo}}.jpg" alt="img" height="200" width="200" style="margin-left:100px;margin-top:10px;border:4px solid gray;border-radius:5px">
+               </div>
+            <div class="add_position">
+        <button type="submit" class="add_btn">Edit</button>
+        <button type="reset" class="add_btn_reset" >Reset</button>
+        </div>
+                </div>
+        </form>
+    </div>
+{{/if}}
+</main>
+
+<style>
+    #reg_no{
+        width: 80px;
+    }
+    #reg_lael{
+        margin-left: 240px;
+    }
+    .add_position{
+        margin-top: -80px;
+        margin-left: -260px;
+    }
+   .add_right-edit{
+    position: absolute;
+    top: 0px;
+    left: 520px;
+    height: 360px;
+    width: 500px;
+   }
+   .error_message{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       font-size: 1.5rem;
+   }
+</style>

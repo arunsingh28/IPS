@@ -1,0 +1,122 @@
+{{> nav1 }}
+<main>
+    <h5 class="main_heading">Find Teacher Location</h5>
+    <div class="teacher_search_box">
+        <form action="/ips/findTeacherSheadule" method="post">
+        <label for="teacher" class="teacher_label">Enter Teacher's UID</label>
+            <input type="number" id="teacherSearch" required placeholder="Enter Here" name="uid">
+            <button type="submit" class="teacher_btn">Find</button>
+        </form>
+
+    <section class="get_data">
+        <p class="teacher_name">Name: {{name}} &nbsp; Uid: {{uid}}  &nbsp; Subjects: {{subject}}</p>
+        {{#if empl}}
+        <img src="{{time_table}}" alt="time_table" class="teacher_timeTable">
+        {{else}}
+        <h2 class="teacher_msg">{{msg}}</h2>
+        {{/if}}
+        {{!-- <table border="2">
+            <tr>
+                <td>Days</td>
+                <td>1 Period</td>
+                <td>2 Period</td>
+                <td>3 Period</td>
+                <td>4 Period</td>
+                <td>&nbsp;LunchBrea&nbsp;</td>
+                <td>5 Period</td>
+                <td>6 Period</td>
+                <td>7 Period</td>
+                <td>8 Period</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Room 2</td>
+                <td>Room 1</td>
+                <td>Room 21</td>
+                <td>Room 2</td>
+                <td>&nbsp;LunchBreak&nbsp;</td>
+                <td></td>
+                <td></td>
+                <td>Room 5</td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>Monday</td>
+                <td>Room 19</td>
+                <td>Room 11</td>
+                <td></td>
+                <td>Room 10</td>
+                <td>&nbsp;LunchBreak&nbsp;</td>
+                <td>Room 21</td>
+                <td>Room 1</td>
+                <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>Tuesday</td>
+                <td>Room 21</td>
+                <td></td>
+                <td>Room 1</td>
+                <td></td>
+                <td>&nbsp;LunchBreak&nbsp;</td>
+                <td>Room 21</td>
+                <td></td>
+                <td>Room 1</td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>Webnesday</td>
+                <td></td>
+                <td>Room 54</td>
+                <td></td>
+                <td></td>
+                <td>&nbsp;LunchBreak&nbsp;</td>
+                <td>Room 12</td>
+                <td></td>
+                <td></td>
+                <td>Room 34</td>
+            </tr>
+             <tr>
+                <td>Thrusday</td>
+                <td>Room 12</td>
+                <td>Room 10</td>
+                <td></td>
+                <td></td>
+                <td>&nbsp;LunchBreak&nbsp;</td>
+                <td>Room 1</td>
+                <td></td>
+                <td>Room 4</td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>Friday</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>&nbsp;LunchBreak&nbsp;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>Saturday</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>&nbsp;LunchBreak&nbsp;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table> --}}
+    </section>
+    </div>
+</main>
+
+<script>
+
+</script>

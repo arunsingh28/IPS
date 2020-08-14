@@ -1,0 +1,22 @@
+.user-login-container-add {
+    height: 600px ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(218, 223, 226);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.error_notification{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    z-index: 1;
+    font-size: 1.1rem;
+    font-weight: 100;
+    background-color: #dadfe2;
+    padding: 6px 100px 6px 100px;
+}
+  

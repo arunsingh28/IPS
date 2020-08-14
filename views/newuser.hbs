@@ -1,0 +1,68 @@
+
+<title>{{title}}</title>
+<h3 class="error_notification"  style="{{color}}" >{{ error_1}}</h3>
+
+<div class="user-login-bg">
+<div class="user-login-container-add">
+    <div class="user-login-photo">
+        <h2 class="user-login-heading">{{title}}</h2>
+        <div class="user-login-form">
+            <form action="/newUser" method="post">
+            <input type="text" readonly name="uid" id="uid">
+            <label for="name">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-down" id="downarrow"></i></label>
+            <input type="email" name="email" id="user-login-input"  required><br><br>
+             <label for="name">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-down" id="downarrow"></i></label>
+            <input type="name" name="name" id="user-login-input" required  ><br><br>
+             <label for="password" id="user-login-label">Password &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-down" id="downarrow"></i></label>
+            <input type="password" name="password" id="user-login-input" required  ><br><br>
+             <label for="post" id="user-login-label">Post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-arrow-down" id="downarrow"></i></label>
+            <input type="name" name="post" id="user-login-input" required  ><br><br>
+             <label for="Photo" id="user-login-label">Photo Name <sup>(can be your name)</sup><i class="fas fa-arrow-down" id="downarrow"></i></label>
+            <input type="text" name="photo" id="user-login-input" value="default"><br><br>
+            <button type="submit" class="user-login-btn" onclick="return validate()">Add User</button>
+            </form>
+            <div class="user-login-forgot">
+                {{#if condition}}
+               <p class="user-login-forgot-tagline"><a href="/forgotUserPassword" onclick="url()">Forgot Password</a></p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+    body{
+        background-image: url(/images/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #uid{    
+     margin-left: 120%;
+    margin-top: 6%;
+    background: transparent;
+    width: 44px;
+    color: red;
+    outline: none;
+    }
+</style>
+
+
+<script>
+    document.getElementById('uid').value=window.localStorage.getItem('uid');
+    function validate(){
+       var b =  confirm('---------ARE YOU SURE YOU WANT TO ADD THIS USER---------');
+       if(b == true){
+           var uuid = window.localStorage.getItem('uid');
+           var uid = document.getElementById('uid');
+           uid.value = uuid;
+           uuid++;
+           reg_no = window.localStorage.setItem('uid',uuid);
+           return true  
+       }else{
+           return false;
+       }
+    }
+    
+</script>
+

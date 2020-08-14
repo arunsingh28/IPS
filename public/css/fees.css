@@ -1,0 +1,54 @@
+.fees_input_id{
+    width: 100px;
+    height: 20px;
+    margin-top: 20px;
+}
+.fees_input_idi{
+    position: absolute;
+    top: 60px;
+    left: 465px;
+    width: 100px;
+}
+.fees_btn{
+    padding: 5px 20px 5px 20px;
+    background: #3a6cdc;
+    color: #ffffff;
+    position: absolute;
+    left: 600px;
+}
+.fees_form{
+    padding-top: 20px;
+}
+.fees_label_id{
+    position: absolute;
+    top: 65px;
+    left: 325px;
+}
+.fees-info_fromDB{
+    position: absolute;
+    top: 100px;
+    left: 170px;
+}
+.fees-add-data{
+    position: absolute;
+    top: 180px;
+}
+.fees-add-data-inputs{
+    display: inline;
+}
+.fees-add-data-inputs li{
+    float: left;
+    padding-left:30px;
+    margin-left: 20px;
+}
+.fees_data_monthlabel{
+    font-size: .8rem;
+}
+.fees_btn_month{
+    padding: 5px 20px 5px 20px;
+    background: #3a6cdc;
+    color: #ffffff;
+    position: absolute;
+    left: 500px;
+    top: 140px;
+}

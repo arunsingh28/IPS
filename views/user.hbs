@@ -1,0 +1,50 @@
+
+<title>{{title}}</title>
+<h3 class="error_notification"  style="{{color}}" >{{ msg }}</h3>
+<div class="user-login-bg">
+<div class="user-login-container">
+    <div class="user-login-photo">
+        <h2 class="user-login-heading">{{title}}</h2>
+        <div class="user-login-form">
+            <form action="/" method="post">
+            <label for="name">Email  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-arrow-down" id="downarrow"></i></label>
+            <input type="text" name="email" id="user-login-input" required value="{{email}}"><br><br>
+            <label for="name" id="user-login-label">Password </i>
+            <div class="eye">
+                <input type="checkbox" onclick="show()" style="position: absolute;height:15px;width:15px;"><p>Show</p>
+            </div>
+            </label>   
+            <input type="password" name="password" id="user-login-input" required class="password">
+            <button type="submit" class="user-login-btn">{{title}}</button>
+            </form>
+            <div class="user-login-forgot">
+                {{!-- {{#if condition}}
+               <p class="user-login-forgot-tagline"><a href="/forgotUserPassword" onclick="url()">Forgot Password</a></p>
+                {{/if}} --}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+    .eye{
+        position: absolute;
+        left: 90%;
+    }
+    p{
+        position: absolute;
+        left: 30px;
+    }
+</style>
+
+<script>
+   function show() {
+  var x = document.getElementsByClassName('password')[0];
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>

@@ -1,0 +1,130 @@
+main{
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+}
+.main_profile{
+    height: 500px;
+    width: 300px;
+    background-color: rgb(205, 216, 216);
+    z-index: -1;  
+}
+.main_profileimg{
+    display: grid;
+    justify-content: center;
+    padding-top: 60px;
+}
+.main-proimg{
+    height: 200px !important;
+    width: 200px !important;
+    border: 3px solid rgb(172, 172, 172);
+    border-radius: 5px;
+}
+.main_profilename{
+    display: grid;
+    justify-content: center;
+    padding-top: 70px;
+    font-size: 1.1rem;
+    font-weight: 100;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+.main_profiledegination{
+    display: grid;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: .9rem;
+    font-weight: 100;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+.main_profileuid{
+    display: grid;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: .9rem;
+    font-weight: 100;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+.main_profilesession{
+    display: grid;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: .9rem;
+    font-weight: 100;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+.main_profilenextmetting{
+    display: grid;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: .9rem;
+    font-weight: 100;
+    padding-bottom: 5px;
+}
+
+/* dashbord */
+.main_dashbord{
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    background-color: rgb(197, 206, 203);
+    height: 100%;
+    width: 780px;
+    padding: 50px;
+    padding-top: 60px;
+}
+.main_profit{
+    display: grid;
+    justify-content: start;
+}
+.main_progress{
+    margin: 0.5rem 0 1rem 0;
+}
+.main_dashbord_edit{
+    display: block;
+    padding: 8px 40px 8px 40px;
+    margin: auto;
+    margin-top: 20px;
+    background-color:#3a6cdc;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+.main_dashbord_edit:hover{
+    cursor: pointer;
+    background-color: #091f41;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+progress {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 600px;
+  }
+ ::-webkit-progress-value{
+     background: #215496;
+ }
+  ::-webkit-progress-bar {
+    background-color: azure;
+    border-radius: 4px;
+  }
+.main_heading{
+    position: absolute;
+    top: 0px;
+    width: 1080px;
+    font-family: monospace;
+    font-size: 1.8rem;
+    background-color: rgba(23, 86, 145, 0.671);
+    color: #eee;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #ffffff;
+    font-weight: 100;
+    text-align: center;
+    z-index: 1000;
+}

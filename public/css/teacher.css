@@ -1,0 +1,45 @@
+main{
+    height: 500px;
+    width: 1080px;
+    background-color: rgb(205, 216, 216);
+}
+.teacher_search_box{
+    margin-top: 40px;
+}
+.teacher_search_box input{
+    width: 100px !important;
+    height: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.teacher_btn{
+    padding: 5px 25px 5px 25px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    background-color: #3a6cdc;
+    color: #ffffff;
+}
+.teacher_label{
+    padding-left: 460px;
+    font-size: 1.2rem;
+}
+.get_data{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+table{
+    margin: 50px;
+    margin-left: 100px;
+}
+.teacher_timeTable{
+    padding-top: 20px;
+    height: 300px !important;
+    width: 900px !important;
+    margin-left: 70px;
+}
+.teacher_msg{
+    margin: 100px;
+}

@@ -1,0 +1,80 @@
+{{> nav }}
+
+<main>
+     <h4 class="main_heading"> Dashboard</h4>
+    <div class="main_profile">
+        <div class="main_profileimg">
+            <img src="/images/{{photo}}.JPG" alt="img" class="main-proimg">
+        </div>
+        <div class="main_profilename">
+            <p><strong>{{name}}</strong></p>
+        </div>
+        <div class="main_profiledegination">
+            <p>{{post}}</p>
+        </div>
+         <div class="main_profileuid">
+            <p>UID: {{uid}}</p>
+        </div>
+           <div class="main_profilesession">
+            <p>Session:{{session}}-2021</p>
+        </div>
+        <div class="main_profilenextmetting">
+            <p>Next Meeting:10-Augest-2021</p>
+        </div>
+    </div>
+
+    <div class="main_dashbord">
+        <div class="main_profit">
+             <label for="profit">Profit: {{profit}} <sup> (according to last month and again reset next month according to last month)</sup></label>
+            <div class="main_progress">
+               <progress value="{{profit}}" max="99900" class="file"></progress>
+            </div>  
+              <label for="Teacher">Today Fees: <p id="todayfees"></p> <sup> (according to Today Fees)</sup></label>
+            <div class="main_progress">
+                 <progress value="" max="8000" class="file" id="todayfeespro"></progress>
+            </div>  
+              <label for="Electric">Total Fees: {{fees}} <sup>(Total Incoming fees)</sup></label>
+            <div class="main_progress">
+               <progress value="{{fees}}" max="120000" class="file"></progress>
+            </div>  
+              <label for="Electric">Electric bill: {{bill}} <sup>(move according to time)</sup>  <i class="fas fa-info-circle"></i></label>
+            <div class="main_progress">
+                <progress value="{{bill}}" max="99900" class="file"></progress>
+            </div> 
+            <label for="Electric">Students: {{seat}} <sup>(show according to seets left in school)</sup>  <i class="fas fa-info-circle"></i></label>
+            <div class="main_progress">
+                <progress value="{{student}}" max="3000" class="file"></progress>
+            </div> 
+
+       <a href="edit/reset/ips-dashboard/information/u/2Y21" onclick="return warning()"><button class="main_dashbord_edit" >Edit <i class="fas fa-edit"></i></button></a>
+    </div>
+</main>
+
+
+<script>
+    function warning(){
+      var condition = confirm('Are you sure:');
+       if(condition == true){
+           return true;
+       }else{
+           return false;
+       }
+    }
+
+    function today(){
+        var TF = window.localStorage.getItem('today')
+        var IN = document.getElementById('todayfees');
+        var inp = document.getElementById('todayfeespro').value = TF;
+        IN.innerHTML = TF;
+    }
+
+    today();
+</script>
+
+<style>
+    #todayfees{
+    position: absolute;
+    right: 447px;
+    top: 133px;
+    }
+</style>

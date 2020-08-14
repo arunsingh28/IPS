@@ -1,0 +1,47 @@
+{{>st_nav}}
+{{!-- dashboard --}}
+
+<div class="student_profile">
+    <img src="/images/arun.jpg" alt="img" height="200" width="200" class="student_profilephoto">
+   <div class="student_info">
+        <h5 id="student_name"><strong>Arun Pratap Singh</strong></h5>
+        <p id="reg_no"><strong>Registration</strong>: 20201</p>
+        <p id="roll"><strong>Roll Number</strong>:02</p>
+        <p id="Father"><strong>Father Name</strong>: I.P. Singh</p>
+        <p id="mother"><strong>Mother Name</strong>:Anjali Singh</p>
+        <p id="class"><strong>Class</strong>: 11th-B</p>
+        <p id="class_teacher"><strong>Class Teacher</strong> : Anita Sharma</p>
+   </div>
+</div>
+
+<div class="report_graph">
+    <div id="chartContainer"></div>
+</div>
+
+
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light",
+	axisY:{
+		includeZero: false
+	},
+    title : {
+        text : 'Progress Report'
+    },
+	data: [{        
+		type: "line",
+      	indexLabelFontSize: 10,
+		dataPoints: [
+			{ y: 30},
+			{ y: 50, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+			{ y: 100, indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },	
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
