@@ -81,5 +81,5 @@ app.use(express.static(path.join(__dirname,'/public')));
 // server listning
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,()=>{
-    console.log(`server running on https://localhost:${PORT}`);
+    console.log(`server is up on https://localhost:${PORT}`);
 })
